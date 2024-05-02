@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "L2DSI1": {
+    "Angular_test": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/l2-dsi1",
+            "outputPath": "dist/angular-test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "L2DSI1:build:production"
+              "browserTarget": "Angular_test:build:production"
             },
             "development": {
-              "browserTarget": "L2DSI1:build:development"
+              "browserTarget": "Angular_test:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "L2DSI1:build"
+            "browserTarget": "Angular_test:build"
           }
         },
         "test": {
@@ -96,6 +96,6 @@
     }
   },
   "cli": {
-    "analytics": "00ae43f2-5b90-46ec-a1a9-88aaf9c018c2"
+    "analytics": "3cbb68e0-aa1a-4496-9b0e-7bc2d181136f"
   }
 }
