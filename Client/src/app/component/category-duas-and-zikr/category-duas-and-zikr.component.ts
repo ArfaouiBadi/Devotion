@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './category-duas-and-zikr.component.html',
-  styleUrl: './category-duas-and-zikr.component.css'
+  styleUrls: ['./category-duas-and-zikr.component.css'],
 })
-export class CategoryDuasAndZikrComponent {
-
-}
+export class CategoryDuasAndZikrComponent {}

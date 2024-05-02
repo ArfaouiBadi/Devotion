@@ -6,8 +6,6 @@ import { CategoryDuasAndZikrComponent } from '../category-duas-and-zikr/category
   standalone: true,
   imports: [CategoryDuasAndZikrComponent],
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.css'
+  styleUrls: ['./main-content.component.css'],
 })
-export class MainContentComponent {
-
-}
+export class MainContentComponent {}

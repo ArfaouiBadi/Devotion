@@ -14,6 +14,6 @@ import { CategoryDuasAndZikrComponent } from '../component/category-duas-and-zik
     CategoryDuasAndZikrComponent,
   ],
   templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.css',
+  styleUrls: ['./home-page.component.css'],
 })
 export class HomePageComponent {}
