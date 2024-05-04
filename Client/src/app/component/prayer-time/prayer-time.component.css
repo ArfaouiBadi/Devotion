@@ -1,0 +1,71 @@
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+   background-color: gray;
+}
+.container h3{
+   font-size: 30px;
+   color: #464b61;
+   margin: 20px;
+
+}
+.timersContainer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   padding: 50px;
+   width: 100%;
+   background-color: red;
+}
+.timerContainer{
+   background-color: #ebf6ee;
+   margin: 0 20px;
+   
+   width: 290px;
+   height: 320px;
+   padding: 30px;
+   border-radius: 50% 50% 2px 2px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   transition: all 0.3s ease;
+   
+}
+.timerContainer:hover{
+   background-color: #d7ecdd;
+}
+.timerContainer img {
+   width: 70px;
+   height: 70px;
+   margin-bottom: 30px;
+}
+.timerTable{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.timerTable .row {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+   width: 100%;
+   margin: 10px 0;
+}
+.timerTable .col {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+}
+span{
+   font-size: 20px;
+   color: #464b61;
+   font-weight: 500;
+}
