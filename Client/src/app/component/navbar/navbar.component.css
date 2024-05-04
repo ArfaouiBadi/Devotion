@@ -1,8 +1,6 @@
 .navbarContainer{
       background-color: #fef7eb; 
       border-bottom: 5px solid #ebe4d8;
-      padding: 0;
-      margin: 0;
       width:100vw;
       display: flex;
       justify-content: center;

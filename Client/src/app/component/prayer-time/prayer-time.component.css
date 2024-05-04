@@ -1,12 +1,12 @@
-.container{
+.containers{
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    width: 100%;
-   background-color: gray;
+   
 }
-.container h3{
+.containers h3{
    font-size: 30px;
    color: #464b61;
    margin: 20px;
@@ -19,15 +19,16 @@
    flex-direction: row;
    padding: 50px;
    width: 100%;
-   background-color: red;
+   
 }
 .timerContainer{
    background-color: #ebf6ee;
-   margin: 0 20px;
+   margin: 0 10px;
    
-   width: 290px;
-   height: 320px;
-   padding: 30px;
+   
+   height: 250px;
+   
+   padding: 20px;
    border-radius: 50% 50% 2px 2px;
    display: flex;
    justify-content: center;
@@ -42,7 +43,7 @@
 .timerContainer img {
    width: 70px;
    height: 70px;
-   margin-bottom: 30px;
+   margin-bottom: 10px;
 }
 .timerTable{
    display: flex;

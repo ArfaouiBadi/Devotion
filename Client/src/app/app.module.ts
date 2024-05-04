@@ -12,6 +12,7 @@ import { MainContentComponent } from './component/main-content/main-content.comp
 import { CategoryDuasAndZikrComponent } from './component/category-duas-and-zikr/category-duas-and-zikr.component';
 import { PrayerTimeComponent } from './component/prayer-time/prayer-time.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { BasicOfIslamComponent } from './component/basic-of-islam/basic-of-islam.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     CategoryDuasAndZikrComponent,
     PrayerTimeComponent,
     HomePageComponent,
+    BasicOfIslamComponent,
   ],
   imports: [
     BrowserModule,
