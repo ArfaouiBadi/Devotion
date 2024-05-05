@@ -1,7 +1,5 @@
 .containers{
    display: flex;
-   justify-content: center;
-   align-items: center;
    flex-direction: column;
    width: 100%;
    
@@ -10,7 +8,8 @@
    font-size: 30px;
    color: #464b61;
    margin: 20px;
-
+   padding: 50px;
+   text-align: center;
 }
 .timersContainer{
    display: flex;

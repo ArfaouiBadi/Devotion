@@ -6,6 +6,11 @@
 
 }
 body{
-font-family: 'Poppins';
-  font-weight: 500;
+  font-family: 'Poppins';
+  font-weight: 300;
+    
 }
+html {
+  scroll-behavior: smooth;
+}
+

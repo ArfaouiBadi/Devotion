@@ -1,0 +1,72 @@
+footer{
+   background-color: #35a050;
+   height: 500px;
+   border-radius: 30px 30px 0 0;
+   padding: 50px;
+   font-size: 20px;
+   
+}
+.linksContainer{
+   display: flex;
+   justify-content: space-around;
+   margin-top: 50px;
+}
+.linksContainer a{
+   color: white;
+   text-decoration: none;
+   font-size: 20px;
+}
+.linksContainer a:hover{
+   color: #f1c40f;
+}
+.footerElements{
+   display: flex;
+   justify-content: space-around;
+   margin-top: 50px;
+}
+.footerElements div{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.footerElements div h3{
+   color: white;
+   font-size: 30px;
+}
+
+.termsNewsLetter{
+   display: flex;
+   justify-content: space-around;
+   margin-top: 50px;
+}
+.termsNewsLetter div{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.termsNewsLetter div h3{
+   color: white;
+   font-size: 30px;
+}
+.termsNewsLetter div p{
+   color: white;
+   font-size: 20px;
+}
+.termsNewsLetter div input{
+   width: 300px;
+   height: 40px;
+   border-radius: 20px;
+   border: none;
+   padding: 10px;
+   margin-top: 20px;
+}
+.termsNewsLetter div button{
+   width: 100px;
+   height: 40px;
+   border-radius: 20px;
+   border: none;
+   background-color: #f1c40f;
+   color: white;
+   font-size: 20px;
+   margin-top: 20px;
+}

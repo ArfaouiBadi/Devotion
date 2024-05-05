@@ -1,21 +1,22 @@
 .containers{
    display: flex;
    justify-content: center;
-   align-items: center;
+   
    flex-direction: column;
    
 }
-.container h3{
+.containers h3{
    font-size: 30px;
    color: #464b61;
    margin: 20px;
-
+   padding: 50px;
+   text-align: center;
 }
 .categories{
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    grid-gap: 20px;
-   width: 80%;
+   width: 70%;
    margin: 0 auto;
 
 }

@@ -1,20 +1,21 @@
 .navbarContainer{
       background-color: #fef7eb; 
       border-bottom: 5px solid #ebe4d8;
-      width:100vw;
+      
       display: flex;
       justify-content: center;
       align-items: center;
+      
 
 }
 .navbarLinks{
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       height: 100%;
-      margin: 30px;
+      margin: 30px;     
+      padding-right: 90px;
       text-decoration: none;
       list-style: none;
+      
 }
 
 .navbarLinks a{
@@ -24,6 +25,7 @@
       padding: 5px 8px;
       border-radius: 10px;
       transition: background-color 0.4s ease;
+      
 }
 .navbarLinks a:hover{
       color: white;
@@ -33,6 +35,24 @@
 
 }
 nav{
-   width: 50%;
-   
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 20px;
+
+      
+}
+.navbarLogo{
+  font-size: 30px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Lobster", sans-serif;
+  font-style: normal;
+  color: #163300;
+  user-select: none;
+  cursor: pointer;
+  padding-left: 30px;
+      padding-top: 20px;
+
 }
