@@ -17,10 +17,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DividerModule } from 'primeng/divider';
 import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
 import { DuasAndZikrComponent } from './component/duas-and-zikr/duas-and-zikr.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
+import { InputTextModule } from 'primeng/inputtext';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +44,7 @@ import { RegisterComponent } from './component/register/register.component';
     HttpClientModule,
     InputTextModule,
     DividerModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

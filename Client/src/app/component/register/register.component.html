@@ -1,1 +1,84 @@
-<p>register works!</p>
+<div class="authComponent">
+  <div class="Wrapper">
+    <div class="mainContainer">
+      <div class="text">
+        <h4><i>Lets Create you a new Account !!</i></h4>
+        <h1>Sign up</h1>
+      </div>
+      <div class="formContainer">
+        <form>
+          <div class="form-group">
+            <label for="email" class="label">Email Address</label><br />
+            <input
+              type="text"
+              id="email"
+              autocomplete="username"
+              placeholder="Enter Email Address"
+              class="inputForm"
+            />
+
+            <span class="invalideField" v-if="!data.emailValid"
+              >Invalid Email</span
+            >
+          </div>
+          <div class="form-group-double">
+            <div class="password-group groups">
+              <label for="password" class="label">Password</label><br />
+              <input
+                type="password"
+                id="password"
+                autocomplete="current-password"
+                placeholder="Enter Password"
+                class="inputForm"
+              />
+              <span class="invalideField" v-if="!data.passwordValid"
+                >Your password dont match <br />the minimum requirements</span
+              >
+            </div>
+            <div class="password-group groups">
+              <label for="confirmPassword" class="label">Confirm Password</label
+              ><br />
+              <input
+                type="password"
+                id="confirmPassword"
+                autocomplete="current-password"
+                placeholder="Confirm Password"
+                class="inputForm"
+              />
+              <span class="invalideField" v-if="!data.confirmPasswordValid"
+                >Your password dosn't match</span
+              >
+            </div>
+          </div>
+          <div class="form-group-double">
+            <div class="phone-group groups">
+              <label for="phone" class="label">Phone</label><br />
+              <input
+                type="text"
+                id="phone"
+                placeholder="00-000-000"
+                class="inputForm"
+              />
+              <span class="invalideField" v-if="!data.phoneValid"
+                >Invalide Phone Number</span
+              >
+            </div>
+
+            <div class="address-group groups">
+              <label for="address" class="label">Address</label><br />
+              <input type="text" id="address" class="inputForm" />
+            </div>
+          </div>
+          <span>Already Have an Account ? </span><br />
+          <button type="submit" class="signupButton">Sign Up</button>
+          <div class="messageContainer"></div>
+        </form>
+      </div>
+    </div>
+    <div class="authContainer">
+      <div class="imgContainer">
+        <img src="../../../assets/basicOfIslam.png" alt="Auth Image" />
+      </div>
+    </div>
+  </div>
+</div>

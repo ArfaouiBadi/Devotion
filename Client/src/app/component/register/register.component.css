@@ -1,0 +1,288 @@
+.authComponent {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   background-color: #fefaee;
+ }
+ .imgContainer {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+ }
+ .imgContainer img {
+   padding-top: 40px;
+   width: 70%;
+ }
+ 
+ .authContainer {
+   height: 85%;
+   width: 50%;
+   display: flex;
+   flex-direction: row;
+ }
+ .mainContainer {
+   width: 50%;
+ }
+ .Wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   padding: 0 10%;
+   height: 100%;
+   width: 100%;
+ }
+ .form-group {
+   margin-bottom: 10px;
+ }
+ .form-group-double {
+   display: flex;
+   flex-direction: row;
+ 
+   gap: 2.5%;
+   margin-bottom: 20px;
+ }
+ .groups {
+   flex: 1;
+ }
+ 
+ .form-group-double input {
+   flex: 1;
+   width: 100%;
+ }
+ 
+ .formContainer {
+   width: 100%;
+   display: flex;
+   padding: 40px;
+   align-items: center;
+ }
+ label {
+   font-family: "Poppins";
+   font-weight: 300;
+   color: black;
+   font-size: 0.8rem;
+   user-select: none;
+ }
+ 
+ .form-group + .form-group {
+   margin-top: 20px;
+ }
+ 
+ .inputForm:hover,
+ .inputForm:focus {
+   background-position: right center;
+   background-size: 200% auto;
+   -webkit-animation: pulse 3s infinite;
+   animation: pulse512 1.5s infinite;
+   outline: none;
+ }
+ .formContainer {
+   width: 100%;
+   display: flex;
+   padding: 40px;
+   align-items: center;
+ }
+ label {
+   font-family: "Poppins";
+   font-weight: 300;
+   color: black;
+   font-size: 23px;
+ }
+ .invalideField {
+   font-family: "Poppins";
+   font-weight: 200;
+   color: red;
+   font-size: 13px;
+ }
+ .form-group {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+ }
+ .form-group + .form-group {
+   margin-top: 20px;
+ }
+ .inputForm {
+   width: 100%;
+   padding: 12px;
+   border-radius: 15px;
+   margin-top: 10px;
+   padding-left: 20px;
+   color: #707070;
+   background-color: #ebe4d8;
+ }
+ .text {
+   padding: 20px 0px 0px 40px;
+ }
+ h1 {
+   font-size: 50px;
+   font-weight: 700;
+   font-family: "Poppins";
+   margin-top: 3px;
+ }
+ h4 {
+   font-family: "Poppins";
+   font-weight: 300;
+ }
+ input::placeholder {
+   font-family: "Poppins";
+   font-weight: 300;
+   color: rgba(0, 0, 0, 0.455);
+   font-size: 15px;
+ }
+ input {
+   font-family: "Poppins";
+   font-weight: 300;
+   color: rgba(0, 0, 0, 0.455);
+   font-size: 15px;
+ }
+ form {
+   display: flex;
+   flex-direction: column;
+   width: 80%;
+ }
+ .continu {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   margin-top: 10px;
+   font-family: "Poppins";
+   font-weight: 300;
+   color: rgba(0, 0, 0, 0.455);
+   font-size: 15px;
+   margin-top: 23px;
+   text-decoration: none;
+   text-align: center;
+ }
+ .continu a {
+   text-decoration: none;
+   color: rgba(0, 0, 0, 0.455);
+   font-size: 15px;
+   margin-top: 23px;
+   text-decoration: none;
+   text-align: center;
+ }
+ .continueWithLogo {
+   margin-top: 8px;
+   text-align: center;
+ }
+ .continueWithLogo img {
+   width: 14%;
+   margin-top: 6px;
+   padding-left: 16px;
+ }
+ 
+ .recoverPassword {
+   font-family: "Poppins";
+   font-weight: 300;
+   color: rgba(0, 0, 0, 0.455);
+   font-size: 15px;
+   margin-top: 23px;
+   text-decoration: none;
+   text-align: center;
+ }
+ .recoverPassword:hover {
+   color: #9fe870;
+ }
+ .signupButton {
+   border: none;
+   color: white;
+   background-color: #14a800;
+   border-radius: 20px;
+   font-family: "Poppins";
+   font-size: 23px;
+   width: 70%;
+   margin: auto;
+   font-weight: 200;
+   padding: 0.6em 1.5em;
+   cursor: pointer;
+   text-decoration: none;
+   text-align: center;
+   transition: all 0.5s ease;
+ }
+ .signupButton:hover {
+   background-position: right center;
+   background-color: #1bd403;
+   background-size: 200% auto;
+   -webkit-animation: pulse 2s infinite;
+ 
+   animation: pulse512 1.5s infinite;
+ }
+ 
+ h1 {
+   font-size: 50px;
+   font-weight: 700;
+   font-family: "Poppins";
+ }
+ h4 {
+   font-family: "Poppins";
+   font-weight: 300;
+ }
+ .messageContainer {
+   position: fixed;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   height: 10%;
+   margin-bottom: 20px;
+ }
+ @keyframes pulse512 {
+   0% {
+     box-shadow: 0 0 0 0 #14a8002b;
+   }
+ 
+   70% {
+     box-shadow: 0 0 0 10px rgba(93, 218, 68, 0);
+   }
+ 
+   100% {
+     box-shadow: 0 0 0 0 rgba(68, 218, 108, 0);
+   }
+ }
+ 
+ @media only screen and (max-width: 768px) {
+   .authContainer {
+     display: none;
+   }
+   i {
+     font-size: 10px;
+   }
+   h1 {
+     font-size: 30px;
+   }
+   .text {
+     padding-top: 50px;
+   }
+   .mainContainer {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-top: 50px;
+   }
+ 
+   label {
+     font-family: "Poppins";
+     font-weight: 300;
+     color: black;
+     font-size: 12px;
+   }
+   h1 {
+     text-align: center;
+   }
+   .recoverPassword {
+     text-align: center;
+     font-size: 12px;
+   }
+   .form-group-double {
+     flex-direction: column;
+     width: 100%;
+   }
+ }

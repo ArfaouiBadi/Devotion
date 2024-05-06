@@ -1,1 +1,42 @@
-<p>login works!</p>
+<div class="authComponent">
+  <div class="Wrapper">
+    <div class="authContainer">
+      <div class="imgContainer">
+        <img src="../../../assets/basicOfIslam.png" alt="Auth Image" />
+      </div>
+    </div>
+    <div class="mainContainer">
+      <div class="text">
+        <h4><i>Welcome Back!</i></h4>
+        <h1>Sign in</h1>
+      </div>
+      <div class="formContainer">
+        <form>
+          <div class="form-group">
+            <label for="email" class="label">Email Address</label><br />
+            <input id="email" class="inputForm" placeholder="enter email"/>
+            <span class="invalideField" v-if="!data.emailValid"
+              >Invalide Email</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="label">Password</label><br />
+
+            <input id="password" class="inputForm" type="password" placeholder="enter password"/>
+            <span class="invalideField" v-if="!data.passwordValid"
+              >Invalide Password</span
+            >
+          </div>
+          <div class="Links">
+            <a href="#" class="recoverPassword">Recover Password?</a>
+          </div>
+          <br />
+
+          <button type="submit" class="signupButton">Sign In</button>
+        </form>
+        <div class="messageContainer"></div>
+      </div>
+    </div>
+  </div>
+</div>
