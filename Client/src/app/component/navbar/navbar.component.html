@@ -4,16 +4,18 @@
       <h1>Devotion</h1>
     </div>
     <ul class="navbarLinks">
-      <li><a> Home</a></li>
-      <li><a> Quran</a></li>
-      <li><a> Prayers</a></li>
-      <li><a> Hadith</a></li>
-      <li><a> History</a></li>
+      <li><a routerLink="/home" routerLinkActive="active"> Home</a></li>
+      <li><a routerLink="/quran" routerLinkActive="active"> Quran</a></li>
+      <li><a routerLink="/prayers" routerLinkActive="active"> Prayers</a></li>
+      <li><a routerLink="/hadith" routerLinkActive="active"> Hadith</a></li>
+      <li><a routerLink="/history" routerLinkActive="active"> History</a></li>
     </ul>
     <div>
       <ul class="navbarLinks">
-        <li><a href="login"> Login</a></li>
-        <li><a href="register"> Register</a></li>
+        <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+        <li>
+          <a routerLink="/register" routerLinkActive="active">Register</a>
+        </li>
       </ul>
     </div>
   </nav>

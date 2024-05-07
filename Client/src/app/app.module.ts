@@ -21,6 +21,10 @@ import { DuasAndZikrComponent } from './component/duas-and-zikr/duas-and-zikr.co
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { InputTextModule } from 'primeng/inputtext';
+import { Router } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ThumbnailComponent } from './component/thumbnail/thumbnail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +39,7 @@ import { InputTextModule } from 'primeng/inputtext';
     DuasAndZikrComponent,
     LoginComponent,
     RegisterComponent,
+    ThumbnailComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +50,11 @@ import { InputTextModule } from 'primeng/inputtext';
     InputTextModule,
     DividerModule,
     FormsModule,
+    ReactiveFormsModule,
+    RouterLink,
+    RouterLinkActive,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

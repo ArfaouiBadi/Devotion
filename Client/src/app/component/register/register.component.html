@@ -1,23 +1,34 @@
 <div class="authComponent">
+  <app-navbar></app-navbar>
   <div class="Wrapper">
+    <div class="authContainer">
+      <div class="imgContainer">
+        <img src="../../../assets/basicOfIslam.png" alt="Auth Image" />
+      </div>
+    </div>
     <div class="mainContainer">
       <div class="text">
-        <h4><i>Lets Create you a new Account !!</i></h4>
         <h1>Sign up</h1>
       </div>
       <div class="formContainer">
-        <form>
+        <form (ngSubmit)="submitForm()" [formGroup]="registerForm">
           <div class="form-group">
             <label for="email" class="label">Email Address</label><br />
             <input
-              type="text"
+              type="email"
               id="email"
               autocomplete="username"
               placeholder="Enter Email Address"
               class="inputForm"
+              formControlName="email"
             />
 
-            <span class="invalideField" v-if="!data.emailValid"
+            <span
+              class="invalideField"
+              *ngIf="
+                registerForm.get('email')!.invalid &&
+                registerForm.get('email')!.touched
+              "
               >Invalid Email</span
             >
           </div>
@@ -27,12 +38,18 @@
               <input
                 type="password"
                 id="password"
-                autocomplete="current-password"
+                autocomplete="new-password"
                 placeholder="Enter Password"
                 class="inputForm"
+                formControlName="password"
               />
-              <span class="invalideField" v-if="!data.passwordValid"
-                >Your password dont match <br />the minimum requirements</span
+              <span
+                class="invalideField"
+                *ngIf="
+                  registerForm.get('password')!.invalid &&
+                  registerForm.get('password')!.touched
+                "
+                >Your password doesn't match the minimum requirements</span
               >
             </div>
             <div class="password-group groups">
@@ -41,12 +58,18 @@
               <input
                 type="password"
                 id="confirmPassword"
-                autocomplete="current-password"
+                autocomplete="new-password"
                 placeholder="Confirm Password"
                 class="inputForm"
+                formControlName="confirmPassword"
               />
-              <span class="invalideField" v-if="!data.confirmPasswordValid"
-                >Your password dosn't match</span
+              <span
+                class="invalideField"
+                *ngIf="
+                  registerForm.get('password')!.value !==
+                  registerForm.get('confirmPassword')!.value
+                "
+                >Your password doesn't match</span
               >
             </div>
           </div>
@@ -54,30 +77,36 @@
             <div class="phone-group groups">
               <label for="phone" class="label">Phone</label><br />
               <input
-                type="text"
+                type="tel"
                 id="phone"
                 placeholder="00-000-000"
                 class="inputForm"
+                formControlName="phone"
               />
-              <span class="invalideField" v-if="!data.phoneValid"
-                >Invalide Phone Number</span
+              <span
+                class="invalideField"
+                *ngIf="
+                  registerForm.get('phone')!.invalid &&
+                  registerForm.get('phone')!.touched
+                "
+                >Invalid Phone Number</span
               >
             </div>
 
             <div class="address-group groups">
               <label for="address" class="label">Address</label><br />
-              <input type="text" id="address" class="inputForm" />
+              <input
+                type="text"
+                id="address"
+                class="inputForm"
+                formControlName="address"
+              />
             </div>
           </div>
-          <span>Already Have an Account ? </span><br />
+          <span>Already Have an Account? </span><br />
           <button type="submit" class="signupButton">Sign Up</button>
           <div class="messageContainer"></div>
         </form>
-      </div>
-    </div>
-    <div class="authContainer">
-      <div class="imgContainer">
-        <img src="../../../assets/basicOfIslam.png" alt="Auth Image" />
       </div>
     </div>
   </div>
