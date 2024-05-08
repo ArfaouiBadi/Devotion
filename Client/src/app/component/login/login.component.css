@@ -39,11 +39,18 @@
 
 .formContainer {
    width: 100%;
-  
-   
    padding: 40px;
    align-items: center;
    
+ }
+ .linkSignUp{
+    font-family: "Poppins";
+    font-weight: 200;
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 20px 0px;
+  
  }
  label {
    font-family: "Poppins";
@@ -118,26 +125,25 @@
    text-decoration: none;
    text-align: center;
    transition: all 0.5s ease;
+
  }
  .signupButton:hover {
    background-position: right center;
    background-color: #1bd403;
    background-size: 200% auto;
    -webkit-animation: pulse 2s infinite;
- 
    animation: pulse512 1.5s infinite;
  }
  @media screen and (max-width: 780px) {
    .authButton {
      margin-left: 0px;
- 
      font-size: 12px;
    }
    
  }
  @media only screen and (max-width: 768px) {
    .authContainer {
-     display: none; /* Hide the authContainer on small screens */
+     display: none;
    }
  
    .formContainer {

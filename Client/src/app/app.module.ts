@@ -24,6 +24,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { Router } from '@angular/router';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ThumbnailComponent } from './component/thumbnail/thumbnail.component';
+import { HadithComponent } from './component/hadith/hadith.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ThumbnailComponent } from './component/thumbnail/thumbnail.component';
     LoginComponent,
     RegisterComponent,
     ThumbnailComponent,
+    HadithComponent,
   ],
   imports: [
     BrowserModule,

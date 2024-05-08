@@ -10,6 +10,7 @@
    align-items: center;
    flex-direction: column;
    
+   
 }
 
 .basicOfIslamContainer{
@@ -19,6 +20,7 @@
    align-items: center;
    flex-direction: row;
    padding: 100px;
+   border-radius: 50px;
    width: 100%;
 }
 .center img{
