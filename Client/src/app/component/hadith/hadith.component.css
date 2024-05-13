@@ -3,7 +3,9 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      margin: 20px 0;
+      width: 70%;
+      margin: 20px auto;
+      
 }
 
 
@@ -22,9 +24,15 @@
    position: relative;
    padding: 150px 100px;
    box-shadow: 0 0px 10px 1px #ebe4d889;
+  
 }
-.hadithCardText p {
-   
+.hadidhText{
+   font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0
 }
 .hadithCardText h4{
    font-size: 35px;

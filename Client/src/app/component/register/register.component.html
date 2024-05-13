@@ -17,7 +17,7 @@
             <input
               type="email"
               id="email"
-              autocomplete="username"
+              autocomplete="email"
               placeholder="Enter Email Address"
               class="inputForm"
               formControlName="email"
@@ -31,6 +31,46 @@
               "
               >Invalid Email</span
             >
+          </div>
+          <div class="form-group-double">
+            <div class="password-group groups">
+              <label for="name" class="label">FirstName</label><br />
+              <input
+                type="text"
+                id="text"
+                autocomplete="Your name"
+                placeholder="Enter your Firstname"
+                class="inputForm"
+                formControlName="nom"
+              />
+              <span
+                class="invalideField"
+                *ngIf="
+                  registerForm.get('nom')!.invalid &&
+                  registerForm.get('nom')!.touched
+                "
+                >Your FirstName doesn't match the minimum requirements</span
+              >
+            </div>
+            <div class="password-group groups">
+              <label for="lastName" class="label">LastName</label><br />
+              <input
+                type="text"
+                id="LastName"
+                autocomplete="LastName"
+                placeholder="enter LastName"
+                class="inputForm"
+                formControlName="prenom"
+              />
+              <span
+                class="invalideField"
+                *ngIf="
+                  registerForm.get('prenom')!.value !==
+                  registerForm.get('prenom')!.value
+                "
+                >Your LastName doesn't match</span
+              >
+            </div>
           </div>
           <div class="form-group-double">
             <div class="password-group groups">

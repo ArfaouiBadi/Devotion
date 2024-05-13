@@ -14,20 +14,20 @@
       <div class="formContainer">
         <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
           <div class="form-group">
-            <label for="username" class="label">Username</label><br />
+            <label for="email" class="label">Email</label><br />
             <input
-              id="username"
+              id="email"
               class="inputForm"
-              formControlName="username"
-              placeholder="enter username"
+              formControlName="email"
+              placeholder="enter email"
             />
             <span
               class="invalideField"
               *ngIf="
-                loginForm.get('username')!.invalid &&
-                loginForm.get('username')!.touched
+                loginForm.get('email')!.invalid &&
+                loginForm.get('email')!.touched
               "
-              >Invalid Username</span
+              >Invalid Email</span
             >
           </div>
 
@@ -50,7 +50,9 @@
             >
           </div>
           <div class="form-group">
-            <a href="/register" class="linkSignUp">Don't have an account? Sign up</a>
+            <a href="/register" class="linkSignUp"
+              >Don't have an account? Sign up</a
+            >
           </div>
           <button type="submit" class="signupButton">Login</button>
         </form>
