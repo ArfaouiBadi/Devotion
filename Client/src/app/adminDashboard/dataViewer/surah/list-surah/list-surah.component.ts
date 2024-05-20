@@ -10,7 +10,7 @@ import { SurahService } from 'src/app/service/surah.service';
 export class ListSurahComponent implements OnInit {
   surahs: Surah[] = [];
   currentPage: number = 1;
-  itemsPerPage: number = 10; // Number of items to display per page
+  totalPages: number = 1;
 
   constructor(private surahService: SurahService) {}
 
@@ -19,30 +19,34 @@ export class ListSurahComponent implements OnInit {
   }
 
   loadSurahs(): void {
-    this.surahService.getAllSurahs().subscribe((surahs) => {
-      this.surahs = surahs;
+    this.surahService.getAllSurahs().subscribe((data: Surah[]) => {
+      this.surahs = data;
+      this.totalPages = Math.ceil(this.surahs.length / 10); // Adjust the logic for pagination
     });
   }
 
-  getCurrentPageSurahs(): Surah[] {
-    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
-    const endIndex = startIndex + this.itemsPerPage;
-    return this.surahs.slice(startIndex, endIndex);
+  deleteSurah(id: number): void {
+    this.surahService.deleteSurah(id).subscribe({
+      next: () => {
+        this.surahs = this.surahs.filter((s) => s.suraID !== id);
+      },
+      error: (err) => {
+        console.error('Error deleting Surah:', err);
+      },
+    });
   }
 
   previousPage(): void {
     if (this.currentPage > 1) {
       this.currentPage--;
+      this.loadSurahs();
     }
   }
 
   nextPage(): void {
     if (this.currentPage < this.totalPages) {
       this.currentPage++;
+      this.loadSurahs();
     }
-  }
-
-  get totalPages(): number {
-    return Math.ceil(this.surahs.length / this.itemsPerPage);
   }
 }

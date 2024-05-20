@@ -10,12 +10,15 @@ import { SurahComponent } from './adminDashboard/dataViewer/surah/surah.componen
 import { DuaComponent } from './adminDashboard/dataViewer/dua/dua.component';
 import { BooksComponent } from './adminDashboard/dataViewer/books/books.component';
 import { VersePageComponent } from './verse-page/verse-page.component';
-import { CommentSectionMainComponent } from './commentSection/comment-section-main/comment-section-main.component';
 import { PostSectionMainComponent } from './commentSection/post-section-main/post-section-main.component';
 import { AddSurahComponent } from './adminDashboard/dataViewer/surah/add-surah/add-surah.component';
-import { ListSurahComponent } from './adminDashboard/dataViewer/surah/list-surah/list-surah.component';
-import { DeleteSurahComponent } from './adminDashboard/dataViewer/surah/delete-surah/delete-surah.component';
 import { UpdateSurahComponent } from './adminDashboard/dataViewer/surah/update-surah/update-surah.component';
+import { ListSurahComponent } from './adminDashboard/dataViewer/surah/list-surah/list-surah.component';
+import { HadithComponent } from './component/hadith/hadith.component';
+import { AddHadithComponent } from './adminDashboard/dataViewer/hadith/add-hadith/add-hadith.component';
+import { UpdateHadithComponent } from './adminDashboard/dataViewer/hadith/update-hadith/update-hadith.component';
+import { HadithCRUDComponent } from './adminDashboard/dataViewer/hadith-crud/hadith-crud.component';
+import { ListHadithComponent } from './adminDashboard/dataViewer/hadith/list-hadith/list-hadith.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -40,12 +43,20 @@ const routes: Routes = [
         children: [
           { path: '', component: ListSurahComponent },
           { path: 'add', component: AddSurahComponent },
-          { path: 'update', component: UpdateSurahComponent },
-          { path: 'delete', component: DeleteSurahComponent },
+          { path: 'update/:id', component: UpdateSurahComponent },
         ],
       },
       { path: 'dua', component: DuaComponent },
       { path: 'books', component: BooksComponent },
+      {
+        path: 'hadith',
+        component: HadithCRUDComponent,
+        children: [
+          { path: '', component: ListHadithComponent },
+          { path: 'add', component: AddHadithComponent },
+          { path: 'update/:id', component: UpdateHadithComponent },
+        ],
+      },
     ],
   },
   {

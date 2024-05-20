@@ -47,8 +47,11 @@ import { CommentSectionMainComponent } from './commentSection/comment-section-ma
 import { PostSectionMainComponent } from './commentSection/post-section-main/post-section-main.component';
 import { AddSurahComponent } from './adminDashboard/dataViewer/surah/add-surah/add-surah.component';
 import { UpdateSurahComponent } from './adminDashboard/dataViewer/surah/update-surah/update-surah.component';
-import { DeleteSurahComponent } from './adminDashboard/dataViewer/surah/delete-surah/delete-surah.component';
 import { ListSurahComponent } from './adminDashboard/dataViewer/surah/list-surah/list-surah.component';
+import { AddHadithComponent } from './adminDashboard/dataViewer/hadith/add-hadith/add-hadith.component';
+import { UpdateHadithComponent } from './adminDashboard/dataViewer/hadith/update-hadith/update-hadith.component';
+import { HadithCRUDComponent } from './adminDashboard/dataViewer/hadith-crud/hadith-crud.component';
+import { ListHadithComponent } from './adminDashboard/dataViewer/hadith/list-hadith/list-hadith.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +68,6 @@ import { ListSurahComponent } from './adminDashboard/dataViewer/surah/list-surah
     LoginComponent,
     RegisterComponent,
     ThumbnailComponent,
-    HadithComponent,
     AdminDashboardComponent,
     SurahComponent,
     DuaComponent,
@@ -79,7 +81,11 @@ import { ListSurahComponent } from './adminDashboard/dataViewer/surah/list-surah
     AddSurahComponent,
     UpdateSurahComponent,
     ListSurahComponent,
-    DeleteSurahComponent,
+    AddHadithComponent,
+    UpdateHadithComponent,
+    HadithComponent,
+    HadithCRUDComponent,
+    ListHadithComponent,
   ],
   imports: [
     BrowserModule,

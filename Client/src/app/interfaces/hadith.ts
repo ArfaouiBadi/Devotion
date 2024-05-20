@@ -1,7 +1,7 @@
 export interface Hadith {
-  HadithID: number;
-  Source: string;
-  Text: string;
-  Arabic_In_Hadith: string;
-  Translation: string;
+  hadithID: number;
+  source: string;
+  text: string;
+  arabicInHadith: string;
+  translation: string;
 }

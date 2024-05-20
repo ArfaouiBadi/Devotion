@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HadithComponent } from './hadith.component';
+import { AddHadithComponent } from './add-hadith.component';
 
-describe('HadithComponent', () => {
-  let component: HadithComponent;
-  let fixture: ComponentFixture<HadithComponent>;
+describe('AddHadithComponent', () => {
+  let component: AddHadithComponent;
+  let fixture: ComponentFixture<AddHadithComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HadithComponent]
+      declarations: [AddHadithComponent]
     });
-    fixture = TestBed.createComponent(HadithComponent);
+    fixture = TestBed.createComponent(AddHadithComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

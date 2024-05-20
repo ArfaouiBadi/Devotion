@@ -1,0 +1,47 @@
+<div class="list-hadith">
+  <h2>List of Hadiths</h2>
+  <button class="btn btn-success" routerLink="/adminDashboard/hadith/add">
+    Add Hadith
+  </button>
+  <table class="table table-striped table-list">
+    <thead>
+      <tr>
+        <th>HadithID</th>
+        <th>Source</th>
+        <th>Text</th>
+        <th>Arabic Text</th>
+        <th>Translation</th>
+        <th>Actions</th>
+        <!-- Add other columns as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hadith of hadiths">
+        <td>{{ hadith.hadithID }}</td>
+        <td>{{ hadith.source || "N/A" }}</td>
+        <td>{{ hadith.text || "N/A" }}</td>
+        <td>{{ hadith.arabicInHadith || "N/A" }}</td>
+        <td>{{ hadith.translation || "N/A" }}</td>
+        <td>
+          <button
+            class="btn btn-primary"
+            [routerLink]="['/adminDashboard/hadith/update', hadith.hadithID]"
+          >
+            Update
+          </button>
+          <button
+            class="btn btn-danger"
+            (click)="deleteHadith(hadith.hadithID)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="pagination">
+    <button class="btn btn-primary" (click)="previousPage()">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button class="btn btn-primary" (click)="nextPage()">Next</button>
+  </div>
+</div>

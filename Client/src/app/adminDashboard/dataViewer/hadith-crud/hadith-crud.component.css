@@ -1,0 +1,33 @@
+.surahNavBar{
+   background-color: #fef7eb; 
+   border-bottom: 5px solid #fae7bc;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 80px;
+}
+
+
+.navbarLinks{
+   display: flex;
+   height: 100%;
+   margin: 30px;     
+   
+   text-decoration: none;
+   list-style: none;
+   
+}
+
+.surahNavBar a{
+   text-decoration: none;
+   color: #000;
+   font-size: 1.2em;
+   padding: 5px 8px;
+   border-radius: 10px;
+   transition: background-color 0.4s ease; 
+}
+.surahNavBar a:hover{
+   color: white;
+   background-color: #f3c458;
+   cursor: pointer;
+}

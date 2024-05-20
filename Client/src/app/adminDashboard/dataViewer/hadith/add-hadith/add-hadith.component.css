@@ -1,4 +1,4 @@
-.deleteSurahComponent {
+.add-hadith {
    .wrapper {
      display: flex;
      margin-top: 50px;
@@ -8,7 +8,7 @@
        font-weight: bold;
        color: black;
    }
-   .btnDeleteSurah{
+   .btnAddSurah{
       background-color: #fae7bc;
       padding: 10px 20px;
       color: #464b61;

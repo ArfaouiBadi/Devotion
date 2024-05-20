@@ -23,6 +23,7 @@ export class AddSurahComponent implements OnInit {
   initializeForm(): void {
     this.surahForm = this.formBuilder.group({
       name: ['', Validators.required],
+      audioUrl: [''],
       englishName: ['', Validators.required],
       arabicName: [''],
       meaning: [''],

@@ -15,21 +15,19 @@ export class SurahService {
     return this.http.get<Surah[]>(`${this.apiUrl}/all`);
   }
 
+  addSurah(surah: Surah): Observable<Surah> {
+    return this.http.post<Surah>(`${this.apiUrl}/addSurah`, surah);
+  }
+
+  deleteSurah(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/deleteSurah/${id}`);
+  }
   getSurahById(id: number): Observable<Surah> {
     return this.http.get<Surah>(`${this.apiUrl}/getSurah/${id}`);
   }
 
-  addSurah(surah: Surah): Observable<Surah> {
+  updateSurah(surah: Surah): Observable<void> {
     console.log(surah);
-    return this.http.post<Surah>(`${this.apiUrl}/addSurah`, surah);
-  }
-
-  updateSurah(surah: Surah): Observable<Surah> {
-    return this.http.put<Surah>(`${this.apiUrl}/updateSurah`, surah);
-  }
-
-  deleteSurah(id: number): Observable<void> {
-    console.log(id);
-    return this.http.delete<void>(`${this.apiUrl}/deleteSurah?id=${id}`);
+    return this.http.put<void>(`${this.apiUrl}/updateSurah`, surah);
   }
 }

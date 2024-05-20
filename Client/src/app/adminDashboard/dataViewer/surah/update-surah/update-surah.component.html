@@ -1,1 +1,158 @@
-<p>update-surah works!</p>
+<div class="updateSurahComponent">
+  <div class="wrapper">
+    <div class="mainContainer">
+      <div class="text">
+        <h4><i>Update Surah</i></h4>
+        <h1>Update Surah</h1>
+      </div>
+      <div class="formContainer">
+        <form [formGroup]="surahForm" (ngSubmit)="submitForm()">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="name" class="label">Name</label>
+                <input
+                  id="name"
+                  class="inputForm"
+                  formControlName="name"
+                  placeholder="Enter name"
+                />
+                <span
+                  class="invalidField"
+                  *ngIf="
+                    surahForm.get('name')!.invalid &&
+                    surahForm.get('name')!.touched
+                  "
+                  >Invalid Name</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="englishName" class="label">English Name</label>
+                <input
+                  id="englishName"
+                  class="inputForm"
+                  formControlName="englishName"
+                  placeholder="Enter English name"
+                />
+                <span
+                  class="invalidField"
+                  *ngIf="
+                    surahForm.get('englishName')!.invalid &&
+                    surahForm.get('englishName')!.touched
+                  "
+                  >Invalid English Name</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="type" class="label">Type</label>
+                <input
+                  id="type"
+                  class="inputForm"
+                  formControlName="type"
+                  placeholder="Enter type"
+                />
+                <span
+                  class="invalidField"
+                  *ngIf="
+                    surahForm.get('type')!.invalid &&
+                    surahForm.get('type')!.touched
+                  "
+                  >Invalid Type</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="place" class="label">Place</label>
+                <input
+                  id="place"
+                  class="inputForm"
+                  formControlName="place"
+                  placeholder="Enter place"
+                />
+                <span
+                  class="invalidField"
+                  *ngIf="
+                    surahForm.get('place')!.invalid &&
+                    surahForm.get('place')!.touched
+                  "
+                  >Invalid Place</span
+                >
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="audioUrl" class="label">Audio URL</label>
+                <input
+                  id="audioUrl"
+                  class="inputForm"
+                  formControlName="audioUrl"
+                  placeholder="Enter Audio URL"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="arabicName" class="label">Arabic Name</label>
+                <input
+                  id="arabicName"
+                  class="inputForm"
+                  formControlName="arabicName"
+                  placeholder="Enter Arabic name"
+                />
+                <span
+                  class="invalidField"
+                  *ngIf="
+                    surahForm.get('arabicName')!.invalid &&
+                    surahForm.get('arabicName')!.touched
+                  "
+                  >Invalid Arabic Name</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="meaning" class="label">Meaning</label>
+                <input
+                  id="meaning"
+                  class="inputForm"
+                  formControlName="meaning"
+                  placeholder="Enter meaning"
+                />
+                <span
+                  class="invalidField"
+                  *ngIf="
+                    surahForm.get('meaning')!.invalid &&
+                    surahForm.get('meaning')!.touched
+                  "
+                  >Invalid Meaning</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="totalAya" class="label">Total Aya</label>
+                <input
+                  id="totalAya"
+                  class="inputForm"
+                  formControlName="totalAya"
+                  placeholder="Enter total aya"
+                />
+                <span
+                  class="invalidField"
+                  *ngIf="
+                    surahForm.get('totalAya')!.invalid &&
+                    surahForm.get('totalAya')!.touched
+                  "
+                  >Invalid Total Aya</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btnUpdateSurah">Update Surah</button>
+        </form>
+        <div class="messageContainer"></div>
+      </div>
+    </div>
+  </div>
+</div>
