@@ -1,0 +1,22 @@
+.list-surah {
+   
+   padding: 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+ }
+
+ 
+ .list-surah h2 {
+   margin-bottom: 20px;
+ }
+ 
+ .pagination {
+   margin-top: 20px;
+ }
+ 
+ .pagination button {
+   margin-right: 10px;
+ }
+ 

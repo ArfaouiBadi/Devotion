@@ -1,0 +1,17 @@
+#verse-navigation {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ button, select {
+   padding: 10px;
+   margin: 5px;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+ }
+ 
+ button:hover, select:hover {
+   border-color: #888;
+ }
+ 

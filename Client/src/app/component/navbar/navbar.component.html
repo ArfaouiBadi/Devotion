@@ -12,7 +12,17 @@
     </ul>
     <div>
       <ul class="navbarLinks">
-        <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+        <li *ngIf="user?.role === 'Admin'">
+          <a routerLink="/adminDashboard" routerLinkActive="active"
+            >Dashboard</a
+          >
+        </li>
+        <li *ngIf="user">
+          <a routerLink="/login" routerLinkActive="active" (click)="logout()" >Logout</a>
+        </li>
+        <li *ngIf="!user">
+          <a routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
         <li>
           <a routerLink="/register" routerLinkActive="active">Register</a>
         </li>

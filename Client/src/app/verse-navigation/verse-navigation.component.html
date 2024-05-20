@@ -1,0 +1,11 @@
+<div id="verse-navigation">
+   <button (click)="prevVerse()">Previous Verse</button>
+   <button (click)="nextVerse()">Next Verse</button>
+   <select id="surah-select" (change)="onSurahChange($event)">
+     <option *ngFor="let surah of surahs" [value]="surah.id">{{ surah.name }}</option>
+   </select>
+   <select id="verse-select" (change)="onVerseChange($event)">
+     <option *ngFor="let verse of verses" [value]="verse">{{ verse }}</option>
+   </select>
+ </div>
+ 

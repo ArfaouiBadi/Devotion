@@ -16,15 +16,39 @@ import { BasicOfIslamComponent } from './component/basic-of-islam/basic-of-islam
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DividerModule } from 'primeng/divider';
-import { ButtonModule } from 'primeng/button';
+
 import { DuasAndZikrComponent } from './component/duas-and-zikr/duas-and-zikr.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
-import { InputTextModule } from 'primeng/inputtext';
-import { Router } from '@angular/router';
+
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ThumbnailComponent } from './component/thumbnail/thumbnail.component';
 import { HadithComponent } from './component/hadith/hadith.component';
+
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { SurahComponent } from './adminDashboard/dataViewer/surah/surah.component';
+import { DuaComponent } from './adminDashboard/dataViewer/dua/dua.component';
+import { BooksComponent } from './adminDashboard/dataViewer/books/books.component';
+import { MessageService, SelectItem } from 'primeng/api';
+
+import { TableModule } from 'primeng/table';
+import { ToastModule } from 'primeng/toast';
+import { CommonModule } from '@angular/common';
+import { TagModule } from 'primeng/tag';
+import { DropdownModule } from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { VerseDisplayComponent } from './verse-display/verse-display.component';
+import { VerseNavigationComponent } from './verse-navigation/verse-navigation.component';
+import { VerseHeaderComponent } from './verse-header/verse-header.component';
+import { VersePageComponent } from './verse-page/verse-page.component';
+import { CommentSectionMainComponent } from './commentSection/comment-section-main/comment-section-main.component';
+import { PostSectionMainComponent } from './commentSection/post-section-main/post-section-main.component';
+import { AddSurahComponent } from './adminDashboard/dataViewer/surah/add-surah/add-surah.component';
+import { UpdateSurahComponent } from './adminDashboard/dataViewer/surah/update-surah/update-surah.component';
+import { DeleteSurahComponent } from './adminDashboard/dataViewer/surah/delete-surah/delete-surah.component';
+import { ListSurahComponent } from './adminDashboard/dataViewer/surah/list-surah/list-surah.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +66,20 @@ import { HadithComponent } from './component/hadith/hadith.component';
     RegisterComponent,
     ThumbnailComponent,
     HadithComponent,
+    AdminDashboardComponent,
+    SurahComponent,
+    DuaComponent,
+    BooksComponent,
+    VerseDisplayComponent,
+    VerseNavigationComponent,
+    VerseHeaderComponent,
+    VersePageComponent,
+    CommentSectionMainComponent,
+    PostSectionMainComponent,
+    AddSurahComponent,
+    UpdateSurahComponent,
+    ListSurahComponent,
+    DeleteSurahComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +95,12 @@ import { HadithComponent } from './component/hadith/hadith.component';
     RouterLinkActive,
     FormsModule,
     ReactiveFormsModule,
+    ScrollPanelModule,
+    ToastModule,
+    TableModule,
+    TagModule,
+    DropdownModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

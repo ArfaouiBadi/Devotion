@@ -1,0 +1,68 @@
+/* src/app/post-section/post-section.component.css */
+.post-section {
+   max-width: 600px;
+   margin: auto;
+   padding: 1em;
+   font-size: 17px;
+ }
+ .post-section-wrapper{
+   background-color: #fefaee;
+    
+ }
+ .inputForm {
+   width: 50%;
+   padding: 12px;
+   border-radius: 15px;
+   margin-top: 10px;
+   padding-left: 20px;
+   color: #707070;
+   background-color: #ebe4d8;
+   font-size: 17px;
+ }
+ .btn{
+  font-size: 15px;
+ }
+ .btnPostSection{
+   background-color: #fae7bc;
+   padding: 10px 20px;
+   color: #464b61;
+   border: none;
+   margin-top: 20px;
+   border-radius: 10px;
+   
+ }
+ 
+ .new-post, .new-comment {
+   margin-bottom: 1em;
+ }
+ 
+ .new-post textarea, .new-comment input {
+   width: 100%;
+   margin-bottom: 0.5em;
+ }
+ 
+ .posts-list .post, .comments-list .comment {
+   border-bottom: 1px solid #ccc;
+   padding: 30px;
+
+
+ }
+ .posts-list{
+   margin-top: 20px;
+   border-radius: 30px;
+   transition: 0.3s ease-in-out;
+ }
+ .posts-list:hover{
+   background-color: #ebe4d8;
+ }
+ 
+ .post-actions, .comment-actions {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ .post-actions button, .comment-actions button {
+   margin-left: 0.5em;
+ }
+ 

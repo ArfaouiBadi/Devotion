@@ -1,0 +1,100 @@
+<app-navbar></app-navbar>
+<div class="post-section-wrapper">
+  <div class="post-section container">
+    <h2>Posts</h2>
+
+    <div class="new-post mb-3">
+      <textarea
+        [(ngModel)]="newPostContent"
+        class="form-control inputForm"
+        placeholder="Write a post..."
+      ></textarea>
+      <button class="btn btn-primary mt-2" (click)="addPost()">Add Post</button>
+    </div>
+
+    <div class="posts-list">
+      <div *ngFor="let post of posts" class="post card mb-3">
+        <div class="card-body">
+          <p class="card-text">{{ post.postName }}</p>
+          <p class="card-text">{{ post.description }}</p>
+          <div class="post-actions d-flex justify-content-between">
+            <span style="font-size: 13px ; font-weight:200">By {{ post.user?.prenom + " " + post.user?.nom }}</span>
+            <span style="font-size: 13px ; font-weight:200"
+              >{{ post.createdDate | date : "short" }}</span
+            >
+            <div>
+              <button
+                class="btn btn-danger btn-sm"
+                (click)="deletePost(post.postId!)"
+              >
+                Delete Post
+              </button>
+            </div>
+          </div>
+
+          <div class="new-comment mt-3">
+            <input
+              [(ngModel)]="newCommentContent"
+              class="form-control"
+              placeholder="Write a comment..."
+            />
+            <button
+              class="btn btn-secondary mt-2"
+              (click)="addComment(post.postId!)"
+            >
+              Add Comment
+            </button>
+          </div>
+
+          <div class="comments-list mt-3">
+            <div
+              *ngFor="let comment of post.comments"
+              class="comment card mb-2"
+            >
+              <div class="card-body">
+                <p class="card-text">{{ comment.text }}</p>
+                <div class="comment-actions d-flex justify-content-between">
+                  <span>{{ comment.createdDate | date : "short" }}</span>
+
+                  <div>
+                    <button
+                      class="btn btn-warning btn-sm"
+                      (click)="editComment(comment)"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      (click)="deleteComment(comment.commentId!)"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+                <div *ngIf="editCommentContent.commentId === comment.commentId">
+                  <input
+                    [(ngModel)]="editCommentContent.text"
+                    class="form-control mt-2"
+                  />
+                  <button
+                    class="btn btn-primary mt-2"
+                    (click)="updateComment(comment.commentId!)"
+                  >
+                    Save
+                  </button>
+                  <button
+                    class="btn btn-secondary mt-2"
+                    (click)="cancelEditComment()"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

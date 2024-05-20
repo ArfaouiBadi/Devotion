@@ -43,10 +43,10 @@ export class RegisterComponent {
       // Call the appropriate service method to register the user
       this.authService.register(user).subscribe(
         (res) => {
-          console.log('User registered successfully:', res);
-          this.router.navigate(['/login']);
+          this.router.navigate(['/home']);
         },
-        (err: any) => {
+        (err) => {
+          console.error(err.error);
           console.error('Registration failed:', err);
         }
       );

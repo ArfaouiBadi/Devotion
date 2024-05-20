@@ -1,0 +1,38 @@
+<div class="list-surah">
+  <h2>List of Surahs</h2>
+  <table class="table table-striped table-list">
+    <thead>
+      <tr>
+        <th>SuraID</th>
+        <th>Name</th>
+        <th>English Name</th>
+        <th>Arabic Name</th>
+        <th>Meaning</th>
+        <th>Type</th>
+        <th>Popular or Not</th>
+        <th>Place</th>
+        <th>Total Aya</th>
+        <!-- Add other columns as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let surah of surahs">
+        <td>{{ surah.suraID }}</td>
+        <td>{{ surah.name || "N/A" }}</td>
+        <td>{{ surah.englishName || "N/A" }}</td>
+        <td>{{ surah.arabicName || "N/A" }}</td>
+        <td>{{ surah.meaning || "N/A" }}</td>
+        <td>{{ surah.type || "N/A" }}</td>
+        <td>{{ surah.popularOrNot ? "Yes" : "No" }}</td>
+        <td>{{ surah.place || "N/A" }}</td>
+        <td>{{ surah.totalAya }}</td>
+        <!-- Add other columns as needed -->
+      </tr>
+    </tbody>
+  </table>
+  <div class="pagination">
+    <button class="btn btn-primary" (click)="previousPage()">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button class="btn btn-primary" (click)="nextPage()">Next</button>
+  </div>
+</div>
