@@ -1,0 +1,35 @@
+<div class="add-dua">
+  <div class="mainContainer">
+    <h2>Add New Dua</h2>
+    <form [formGroup]="duaForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input
+          id="category"
+          formControlName="category"
+          class="form-control inputForm"
+          placeholder="Enter category"
+        />
+      </div>
+      <div class="form-group">
+        <label for="text">Text</label>
+        <input
+          id="text"
+          formControlName="text"
+          class="form-control inputForm"
+          placeholder="Enter Dua text"
+        />
+      </div>
+      <div class="form-group">
+        <label for="translation">Translation</label>
+        <input
+          id="translation"
+          formControlName="translation"
+          class="form-control inputForm"
+          placeholder="Enter translation"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Add Dua</button>
+    </form>
+  </div>
+</div>

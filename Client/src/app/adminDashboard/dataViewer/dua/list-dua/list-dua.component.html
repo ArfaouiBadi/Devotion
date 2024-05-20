@@ -1,0 +1,41 @@
+<div class="list-dua">
+  <h2>List of Duas</h2>
+  <button class="btn btn-success" routerLink="/adminDashboard/dua/add">
+    Add Dua
+  </button>
+  <table class="table table-striped table-list">
+    <thead>
+      <tr>
+        <th>DuaID</th>
+        <th>Category</th>
+        <th>Text</th>
+        <th>Translation</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dua of duas">
+        <td>{{ dua.duaID }}</td>
+        <td>{{ dua.category || "N/A" }}</td>
+        <td>{{ dua.text || "N/A" }}</td>
+        <td>{{ dua.translation || "N/A" }}</td>
+        <td>
+          <button
+            class="btn btn-primary"
+            [routerLink]="['/adminDashboard/dua/update', dua.duaID]"
+          >
+            Update
+          </button>
+          <button class="btn btn-danger" (click)="deleteDua(dua.duaID!)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="pagination">
+    <button class="btn btn-primary" (click)="previousPage()">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button class="btn btn-primary" (click)="nextPage()">Next</button>
+  </div>
+</div>

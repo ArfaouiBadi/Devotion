@@ -19,6 +19,9 @@ import { AddHadithComponent } from './adminDashboard/dataViewer/hadith/add-hadit
 import { UpdateHadithComponent } from './adminDashboard/dataViewer/hadith/update-hadith/update-hadith.component';
 import { HadithCRUDComponent } from './adminDashboard/dataViewer/hadith-crud/hadith-crud.component';
 import { ListHadithComponent } from './adminDashboard/dataViewer/hadith/list-hadith/list-hadith.component';
+import { AddDuaComponent } from './adminDashboard/dataViewer/dua/add-dua/add-dua.component';
+import { UpdateDuaComponent } from './adminDashboard/dataViewer/dua/update-dua/update-dua.component';
+import { ListDuaComponent } from './adminDashboard/dataViewer/dua/list-dua/list-dua.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -46,7 +49,16 @@ const routes: Routes = [
           { path: 'update/:id', component: UpdateSurahComponent },
         ],
       },
-      { path: 'dua', component: DuaComponent },
+      {
+        path: 'dua',
+        component: DuaComponent,
+        children: [
+          { path: '', component: ListDuaComponent },
+          { path: 'add', component: AddDuaComponent },
+          { path: 'update/:id', component: UpdateDuaComponent },
+        ],
+      },
+
       { path: 'books', component: BooksComponent },
       {
         path: 'hadith',

@@ -52,6 +52,9 @@ import { AddHadithComponent } from './adminDashboard/dataViewer/hadith/add-hadit
 import { UpdateHadithComponent } from './adminDashboard/dataViewer/hadith/update-hadith/update-hadith.component';
 import { HadithCRUDComponent } from './adminDashboard/dataViewer/hadith-crud/hadith-crud.component';
 import { ListHadithComponent } from './adminDashboard/dataViewer/hadith/list-hadith/list-hadith.component';
+import { ListDuaComponent } from './adminDashboard/dataViewer/dua/list-dua/list-dua.component';
+import { UpdateDuaComponent } from './adminDashboard/dataViewer/dua/update-dua/update-dua.component';
+import { AddDuaComponent } from './adminDashboard/dataViewer/dua/add-dua/add-dua.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +89,9 @@ import { ListHadithComponent } from './adminDashboard/dataViewer/hadith/list-had
     HadithComponent,
     HadithCRUDComponent,
     ListHadithComponent,
+    ListDuaComponent,
+    UpdateDuaComponent,
+    AddDuaComponent,
   ],
   imports: [
     BrowserModule,
