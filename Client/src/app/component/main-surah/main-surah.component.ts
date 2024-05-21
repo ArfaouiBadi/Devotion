@@ -15,7 +15,7 @@ export class MainSurahComponent implements OnInit {
   currentTime: number = 0;
   duration: number = 0;
   isPlaying: boolean = false;
-
+  isHovered = false;
   constructor(private surahService: SurahService) {}
 
   ngOnInit(): void {
@@ -65,8 +65,9 @@ export class MainSurahComponent implements OnInit {
   filterSurahs(): void {
     this.filteredSurahs = this.AllSurahs.filter(
       (surah) =>
-        surah.name &&
-        surah.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+        (surah.name &&
+          surah.name.toLowerCase().includes(this.searchTerm.toLowerCase())) ||
+        surah.englishName!.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
   }
 }

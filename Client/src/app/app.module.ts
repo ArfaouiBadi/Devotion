@@ -56,6 +56,7 @@ import { ListDuaComponent } from './adminDashboard/dataViewer/dua/list-dua/list-
 import { UpdateDuaComponent } from './adminDashboard/dataViewer/dua/update-dua/update-dua.component';
 import { AddDuaComponent } from './adminDashboard/dataViewer/dua/add-dua/add-dua.component';
 import { MainSurahComponent } from './component/main-surah/main-surah.component';
+import { MainHadithComponent } from './component/main-hadith/main-hadith.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +95,7 @@ import { MainSurahComponent } from './component/main-surah/main-surah.component'
     UpdateDuaComponent,
     AddDuaComponent,
     MainSurahComponent,
+    MainHadithComponent,
   ],
   imports: [
     BrowserModule,
