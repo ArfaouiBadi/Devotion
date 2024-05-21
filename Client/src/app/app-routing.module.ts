@@ -22,18 +22,30 @@ import { ListHadithComponent } from './adminDashboard/dataViewer/hadith/list-had
 import { AddDuaComponent } from './adminDashboard/dataViewer/dua/add-dua/add-dua.component';
 import { UpdateDuaComponent } from './adminDashboard/dataViewer/dua/update-dua/update-dua.component';
 import { ListDuaComponent } from './adminDashboard/dataViewer/dua/list-dua/list-dua.component';
+import { MainContentComponent } from './component/main-content/main-content.component';
+import { MainSurahComponent } from './component/main-surah/main-surah.component';
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomePageComponent,
+    children: [
+      {
+        path: 'home',
+        component: MainContentComponent,
+      },
+      {
+        path: 'posts',
+        component: PostSectionMainComponent,
+      },
+      {
+        path: 'quran',
+        component: MainSurahComponent,
+      },
+    ],
   },
   {
     path: 'login',
     component: LoginComponent,
-  },
-  {
-    path: 'posts',
-    component: PostSectionMainComponent,
   },
 
   {
@@ -71,10 +83,7 @@ const routes: Routes = [
       },
     ],
   },
-  {
-    path: 'Quran',
-    component: VersePageComponent,
-  },
+
   { path: 'register', component: RegisterComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },

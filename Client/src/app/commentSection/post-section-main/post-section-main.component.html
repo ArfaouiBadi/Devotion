@@ -1,4 +1,3 @@
-<app-navbar></app-navbar>
 <div class="post-section-wrapper">
   <div class="post-section container">
     <h2>Posts</h2>
@@ -13,19 +12,26 @@
     </div>
 
     <div class="posts-list">
-      <div *ngFor="let post of posts" class="post card mb-3">
+      <div
+        *ngFor="let post of posts"
+        class="post card mb-3"
+        style="background-color: #ebe4d8"
+      >
         <div class="card-body">
           <p class="card-text">{{ post.postName }}</p>
           <p class="card-text">{{ post.description }}</p>
           <div class="post-actions d-flex justify-content-between">
-            <span style="font-size: 13px ; font-weight:200">By {{ post.user?.prenom + " " + post.user?.nom }}</span>
-            <span style="font-size: 13px ; font-weight:200"
-              >{{ post.createdDate | date : "short" }}</span
+            <span style="font-size: 13px; font-weight: 200"
+              >By {{ post.user?.prenom + " " + post.user?.nom }}</span
             >
+            <span style="font-size: 13px; font-weight: 200">{{
+              post.createdDate | date : "short"
+            }}</span>
             <div>
               <button
                 class="btn btn-danger btn-sm"
                 (click)="deletePost(post.postId!)"
+                *ngIf="post.user?.email === currentUser.email"
               >
                 Delete Post
               </button>
@@ -54,18 +60,25 @@
               <div class="card-body">
                 <p class="card-text">{{ comment.text }}</p>
                 <div class="comment-actions d-flex justify-content-between">
-                  <span>{{ comment.createdDate | date : "short" }}</span>
-
+                  <span style="font-size: 13px; font-weight: 200">{{
+                    comment.createdDate | date : "short"
+                  }}</span>
+                  <span style="font-size: 13px; font-weight: 200"
+                    >By
+                    {{ comment.user?.prenom + " " + comment.user?.nom }}</span
+                  >
                   <div>
                     <button
                       class="btn btn-warning btn-sm"
                       (click)="editComment(comment)"
+                      *ngIf="comment.user?.email === currentUser.email"
                     >
                       Edit
                     </button>
                     <button
                       class="btn btn-danger btn-sm"
                       (click)="deleteComment(comment.commentId!)"
+                      *ngIf="comment.user?.email === currentUser.email"
                     >
                       Delete
                     </button>
@@ -97,4 +110,3 @@
     </div>
   </div>
 </div>
-<app-footer></app-footer>

@@ -8,8 +8,7 @@
 .navbarLinks{
       display: flex;
       height: 100%;
-      margin: 30px;     
-      
+      margin: 30px;    
       text-decoration: none;
       list-style: none;
       
@@ -34,7 +33,7 @@ li{
 nav{
       display: flex;
       width: 100%;
-      justify-content: space-between;
+      justify-content:space-between;
       flex-wrap: wrap;
       padding: 0 20px;
 }

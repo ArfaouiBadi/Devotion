@@ -22,7 +22,7 @@ export class PostSectionMainComponent implements OnInit {
   };
 
   constructor(private postService: PostService) {}
-
+  currentUser = JSON.parse(localStorage.getItem('user')!);
   ngOnInit(): void {
     this.loadPosts();
   }

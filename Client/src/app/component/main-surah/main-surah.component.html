@@ -1,0 +1,37 @@
+<div class="surahContainer">
+  <div class="searchContainer">
+    <input
+      type="text"
+      placeholder="Search by name"
+      [(ngModel)]="searchTerm"
+      (input)="filterSurahs()"
+      class="searchInput inputForm"
+    />
+  </div>
+  <div class="itemsContainer">
+    <div
+      class="surah-element"
+      *ngFor="let surah of filteredSurahs"
+      (click)="playAudio(surah.audioUrl!)"
+    >
+      <div class="surah-element__name">{{ surah.name }}</div>
+      <div class="surah-element__info">
+        <div class="surah-element__info__ayat">{{ surah.arabicName }}</div>
+        <div class="surah-element__info__type">{{ surah.englishName }}</div>
+      </div>
+      <div class="progress-container">
+        <div
+          class="progress-bar"
+          [style.width.%]="(currentTime / duration) * 100"
+        ></div>
+      </div>
+      <button
+        class="pause-button"
+        (click)="pauseAudio(); $event.stopPropagation()"
+        *ngIf="isPlaying"
+      >
+        Pause
+      </button>
+    </div>
+  </div>
+</div>
