@@ -14,8 +14,8 @@ import { PrayerTimeComponent } from './component/prayer-time/prayer-time.compone
 import { HomePageComponent } from './home-page/home-page.component';
 import { BasicOfIslamComponent } from './component/basic-of-islam/basic-of-islam.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { DividerModule } from 'primeng/divider';
+import { RippleModule } from 'primeng/ripple';
 
 import { DuasAndZikrComponent } from './component/duas-and-zikr/duas-and-zikr.component';
 import { LoginComponent } from './component/login/login.component';
@@ -57,6 +57,7 @@ import { UpdateDuaComponent } from './adminDashboard/dataViewer/dua/update-dua/u
 import { AddDuaComponent } from './adminDashboard/dataViewer/dua/add-dua/add-dua.component';
 import { MainSurahComponent } from './component/main-surah/main-surah.component';
 import { MainHadithComponent } from './component/main-hadith/main-hadith.component';
+import { MainDuaComponent } from './component/main-dua/main-dua.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +97,7 @@ import { MainHadithComponent } from './component/main-hadith/main-hadith.compone
     AddDuaComponent,
     MainSurahComponent,
     MainHadithComponent,
+    MainDuaComponent,
   ],
   imports: [
     BrowserModule,
@@ -117,6 +119,8 @@ import { MainHadithComponent } from './component/main-hadith/main-hadith.compone
     TagModule,
     DropdownModule,
     CommonModule,
+    RippleModule,
+    ToastModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

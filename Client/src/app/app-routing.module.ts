@@ -24,6 +24,8 @@ import { UpdateDuaComponent } from './adminDashboard/dataViewer/dua/update-dua/u
 import { ListDuaComponent } from './adminDashboard/dataViewer/dua/list-dua/list-dua.component';
 import { MainContentComponent } from './component/main-content/main-content.component';
 import { MainSurahComponent } from './component/main-surah/main-surah.component';
+import { MainHadithComponent } from './component/main-hadith/main-hadith.component';
+import { MainDuaComponent } from './component/main-dua/main-dua.component';
 const routes: Routes = [
   {
     path: '',
@@ -36,10 +38,20 @@ const routes: Routes = [
       {
         path: 'posts',
         component: PostSectionMainComponent,
+        canActivate: [userGuard],
       },
       {
         path: 'quran',
         component: MainSurahComponent,
+      },
+
+      {
+        path: 'hadith',
+        component: MainHadithComponent,
+      },
+      {
+        path: 'dua/:category',
+        component: MainDuaComponent,
       },
     ],
   },
@@ -82,6 +94,7 @@ const routes: Routes = [
         ],
       },
     ],
+    canActivate: [adminGuard],
   },
 
   { path: 'register', component: RegisterComponent },

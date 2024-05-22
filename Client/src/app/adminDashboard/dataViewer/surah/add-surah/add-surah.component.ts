@@ -22,7 +22,7 @@ export class AddSurahComponent implements OnInit {
 
   initializeForm(): void {
     this.surahForm = this.formBuilder.group({
-      name: ['', Validators.required],
+      name: [0, Validators.min(0)],
       audioUrl: [''],
       englishName: ['', Validators.required],
       arabicName: [''],
@@ -30,7 +30,7 @@ export class AddSurahComponent implements OnInit {
       type: [''],
       popularOrNot: [false],
       place: [''],
-      totalAya: [0],
+      totalAya: [0, Validators.min(0)],
     });
   }
 

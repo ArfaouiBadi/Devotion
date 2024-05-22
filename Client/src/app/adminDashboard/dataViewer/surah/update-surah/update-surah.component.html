@@ -10,12 +10,13 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label for="name" class="label">Name</label>
+                <label for="name" class="label">Number</label>
                 <input
                   id="name"
                   class="inputForm"
                   formControlName="name"
-                  placeholder="Enter name"
+                  placeholder="Enter number"
+                  type="number"
                 />
                 <span
                   class="invalidField"
@@ -42,24 +43,6 @@
                     surahForm.get('englishName')!.touched
                   "
                   >Invalid English Name</span
-                >
-              </div>
-
-              <div class="form-group">
-                <label for="type" class="label">Type</label>
-                <input
-                  id="type"
-                  class="inputForm"
-                  formControlName="type"
-                  placeholder="Enter type"
-                />
-                <span
-                  class="invalidField"
-                  *ngIf="
-                    surahForm.get('type')!.invalid &&
-                    surahForm.get('type')!.touched
-                  "
-                  >Invalid Type</span
                 >
               </div>
 
@@ -136,6 +119,7 @@
                   class="inputForm"
                   formControlName="totalAya"
                   placeholder="Enter total aya"
+                  type="number"
                 />
                 <span
                   class="invalidField"
@@ -149,7 +133,7 @@
             </div>
           </div>
 
-          <button type="submit" class="btnUpdateSurah">Update Surah</button>
+          <button type="submit" class="btnAddSurah">Update Surah</button>
         </form>
         <div class="messageContainer"></div>
       </div>

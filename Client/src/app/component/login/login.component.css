@@ -57,6 +57,7 @@
    font-weight: 300;
    color: black;
    font-size: 23px;
+   text-align: left;
  }
  .invalideField {
    font-family: "Poppins";

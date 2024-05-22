@@ -6,11 +6,11 @@
     <ul class="navbarLinks">
       <li><a routerLink="/home" routerLinkActive="active"> Home</a></li>
       <li><a routerLink="/quran" routerLinkActive="active"> Quran</a></li>
-      <li><a routerLink="/prayers" routerLinkActive="active"> Prayers</a></li>
+
       <li><a routerLink="/hadith" routerLinkActive="active"> Hadith</a></li>
       <li><a routerLink="/posts" routerLinkActive="active"> Posts</a></li>
     </ul>
-    <div>
+    <div class="loginRegister">
       <ul class="navbarLinks">
         <li *ngIf="user?.role === 'Admin'">
           <a routerLink="/adminDashboard" routerLinkActive="active"

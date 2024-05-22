@@ -1,15 +1,16 @@
 <div class="hadithContainer" id="hadith-component">
-  <h3>Hadith</h3>
-  <div class="hadithCard" *ngFor="let hadith of allHadiths">
+  <h3>Dua</h3>
+  <div class="hadithCard" *ngFor="let dua of allDua">
     <div class="hadithCardText">
       <img src="../../../assets/Shape1.png" class="Shape1" />
       <img src="../../../assets/Shape2.png" class="Shape2" />
+      <div>
+        <p class="hadidhText">{{ dua.category }}</p>
+      </div>
       <p class="hadidhText">
-        {{ hadith.text }}
+        {{ dua.text }}
       </p>
-      <p class="hadithTranslation">
-        {{ hadith.source }}
-      </p>
+      <p class="hadidhText" style="color: #a7a9bc">{{ dua.translation }}</p>
     </div>
   </div>
 </div>

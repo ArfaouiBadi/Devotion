@@ -6,8 +6,7 @@
   <table class="table table-striped table-list">
     <thead>
       <tr>
-        <th>SuraID</th>
-        <th>Name</th>
+        <th>Number</th>
         <th>English Name</th>
         <th>Arabic Name</th>
         <th>Meaning</th>
@@ -21,7 +20,6 @@
     </thead>
     <tbody>
       <tr *ngFor="let surah of surahs">
-        <td>{{ surah.suraID }}</td>
         <td>{{ surah.name || "N/A" }}</td>
         <td>{{ surah.englishName || "N/A" }}</td>
         <td>{{ surah.arabicName || "N/A" }}</td>

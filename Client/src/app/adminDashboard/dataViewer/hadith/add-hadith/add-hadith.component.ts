@@ -20,7 +20,7 @@ export class AddHadithComponent {
     this.hadithForm = this.fb.group({
       source: ['', Validators.required],
       text: ['', Validators.required],
-      arabicInHadith: ['', Validators.required],
+      arabicInHadith: [''],
       translation: ['', Validators.required],
     });
   }

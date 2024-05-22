@@ -31,9 +31,8 @@ font-family: "Cairo", sans-serif;
 font-optical-sizing: auto;
 font-weight: 500;
 font-style: normal;
-direction: rtl;
-
-
+font-variation-settings:
+ "slnt" 0
 }
 .hadithCardText h4{
 font-size: 35px;
@@ -67,5 +66,10 @@ position: absolute;
 top: 10px;
 right: 10px;
 width: 120px;
+}
+.hadidhText{
+font-family: "Cairo", sans-serif;
+font-optical-sizing: auto;
+text-align: center;
 }
 

@@ -9,7 +9,11 @@
       <p class="hadidhText">
         {{ randomHadith!.text }}
       </p>
+
+      <p class="hadithTranslation">
+        {{ randomHadith!.source }}
+      </p>
     </div>
   </div>
-  <button class="hadithButton">Read More</button>
+  <button class="hadithButton" routerLink="/hadith">Read More</button>
 </div>

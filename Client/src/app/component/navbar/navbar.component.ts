@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
 import { User } from 'src/app/interfaces/user';
 
 @Component({
@@ -9,7 +11,7 @@ import { User } from 'src/app/interfaces/user';
 export class NavbarComponent implements OnInit {
   user: User | null = null;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     const userData = localStorage.getItem('user');
@@ -18,8 +20,10 @@ export class NavbarComponent implements OnInit {
     }
     console.log(this.user);
   }
+
   logout() {
     localStorage.removeItem('user');
+    this.router.navigate(['/login']);
     window.location.reload();
   }
 }
